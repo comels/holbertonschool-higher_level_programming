@@ -20,8 +20,17 @@ listint_t *insert_node(listint_t **head, int number)
 		tmp2 = tmp;
 		tmp = tmp->next;
 	}
-	tmp2->next = newnode;
-	newnode->next = tmp;
+
+	if (tmp == NULL)
+	{
+		tmp2->next = newnode;
+		newnode->next = NULL;
+	}
+	else
+	{
+		tmp2->next = newnode;
+		newnode->next = tmp;
+	}
 
 	return (newnode);
 }
