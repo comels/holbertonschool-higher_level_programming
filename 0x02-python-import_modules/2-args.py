@@ -9,3 +9,6 @@ else:
     for argument in range(1, len(argv)):
         print("{}: {}".format(i, argv[i]))
         i += 1
+
+if __name__ == "__main__":
+    argv
