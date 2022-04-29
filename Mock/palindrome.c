@@ -56,16 +56,14 @@ int palyin(list *head)
   list *tmp = head;
   list *tmp2 = head;
 
-  while (tmp->next)
+  while (tmp->next->next)
   {
     tmp = tmp->next;
     i++;
   }
-  i--;
   k = i / 2;
   if (i % 2 != 0)
     j--;
-  printf("i = %d, k = %d\n", i, k);
   for(; j < k + 1; j++)
   {
     tmp = head;
@@ -73,9 +71,6 @@ int palyin(list *head)
     {
       tmp = tmp->next;
     }
-    printf("\ntmp->next->c = %c\n", tmp->next->c);
-    printf("tmp2->c = %c\n", tmp2->c);
-    printf("\n");
     
     if (tmp->next->c != tmp2->c)
     {
@@ -96,11 +91,13 @@ int main(void)
   add_node_char(&head, 'b');
   add_node_char(&head, 'c');
   add_node_char(&head, 'o');
+  add_node_char(&head, 'k');
   add_node_char(&head, 'c');
-  add_node_char(&head, 'p');
+  add_node_char(&head, 'b');
   add_node_char(&head, 'a');
 
-  printf("Lancement du check palyndrome\n");
+  printf("Lancement du check palyndrome...\n");
+  printf("\n");
 
 
   palyin(head);
