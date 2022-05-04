@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if isinstance(roman_string, str) == 0 or roman_string is None:
+    if not isinstance(roman_string, str) or not roman_string:
         return 0
     sum = 0
     for letter in roman_string:
-        if letter not in ['I', 'V', 'X', 'L', 'C', 'D', 'M']:
-            return 0
-        elif letter == "I":
+        if letter == "I":
             sum += 1
         elif letter == "V":
             sum += 5
@@ -20,4 +18,6 @@ def roman_to_int(roman_string):
             sum += 500
         elif letter == "M":
             sum += 1000
+        else:
+            return 0
     return sum
