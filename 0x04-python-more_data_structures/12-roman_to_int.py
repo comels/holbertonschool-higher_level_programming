@@ -6,18 +6,18 @@ def roman_to_int(roman_string):
     for letter in roman_string:
         if letter not in ['I', 'V', 'X', 'L', 'C', 'D', 'M']:
             return 0
-        if letter == "I":
+        elif letter == "I":
             sum += 1
-        if letter == "V":
+        elif letter == "V":
             sum += 5
-        if letter == "X":
+        elif letter == "X":
             sum += 10
-        if letter == "L":
+        elif letter == "L":
             sum += 50
-        if letter == "C":
+        elif letter == "C":
             sum += 100
-        if letter == "D":
+        elif letter == "D":
             sum += 500
-        if letter == "M":
+        elif letter == "M":
             sum += 1000
     return sum
