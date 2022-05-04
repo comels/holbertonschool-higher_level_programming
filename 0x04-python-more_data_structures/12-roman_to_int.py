@@ -26,4 +26,6 @@ def roman_to_int(roman_string):
                 continue
             else:
                 return 0
-    return sum
+        return sum
+    else: 
+        return 0
