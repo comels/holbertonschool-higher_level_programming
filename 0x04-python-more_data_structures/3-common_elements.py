@@ -2,7 +2,7 @@
 
 """
 Autre manière :
-return list(set(set_1).intersection(set_2))
+return set(set_1).intersection(set_2)
 """
 
 
