@@ -79,14 +79,14 @@ class Square:
         """function that prints in stdout the square with the character #
         """
         if self.__size == 0:
-            print()
+            print("")
         elif self.__position[1] > 0:
             for i in range(self.__position[1]):
-                print()
+                print("")
 
         for line in range(self.size):
             for i in range(self.__position[0]):
                 print(" ", end="")
-            for colon in range(self.size):
+            for colon in range(self.__size):
                 print("#", end="")
             print("")
