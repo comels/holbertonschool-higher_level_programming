@@ -3,7 +3,14 @@
 function text_indentation
 """
 
+
 def text_indentation(text):
+    """
+    function that print the text with indentation
+
+    Args:
+        text (str): the text to print
+    """
     if isinstance(text, str) is False:
         raise TypeError("text must be a string")
     else:

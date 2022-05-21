@@ -3,13 +3,13 @@
 function print_square
 """
 
+
 def print_square(size):
     """
     function that print a square
 
     Args:
         size (int): size of the square
-
     """
     if isinstance(size, int) is False:
         raise TypeError("size must be an integer")

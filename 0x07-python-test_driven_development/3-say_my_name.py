@@ -11,7 +11,6 @@ def say_my_name(first_name, last_name=""):
     Args:
         first_name (str): the first name
         last_name (str): the last name. Defaults to "".
-
     """
     if isinstance(first_name, str) is False:
         raise TypeError("first_name must be a string")
