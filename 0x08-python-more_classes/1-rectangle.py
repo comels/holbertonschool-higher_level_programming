@@ -35,7 +35,7 @@ class Rectangle:
 
         if isinstance(value, int) is False:
             raise TypeError("width must be an integer")
-        if value < 0:
+        if value <= 0:
             raise ValueError("width must be >= 0")
 
     @property
@@ -59,5 +59,5 @@ class Rectangle:
 
         if isinstance(value, int) is False:
             raise TypeError("height must be an integer")
-        if value < 0:
+        if value <= 0:
             raise ValueError("height must be >= 0")
