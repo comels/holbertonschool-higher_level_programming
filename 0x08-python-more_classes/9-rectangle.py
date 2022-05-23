@@ -17,7 +17,7 @@ class Rectangle:
         Returns:
             Rectangle:
         """
-        return cls(size, size)
+        return (cls(size, size))
 
     def __init__(self, width=0, height=0):
         """init a rectangle
