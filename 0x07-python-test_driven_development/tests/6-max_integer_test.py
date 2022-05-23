@@ -38,5 +38,11 @@ class TestMaxInteger(unittest.TestCase):
         list = [2, 6.66, 24.24]
         self.assertEqual(max_integer(list), 24.24)
 
+    def test_neg(self):
+        """test list of int and float
+        """
+        list = [2, 6.66, -24.24]
+        self.assertEqual(max_integer(list), 6.66)
+        
 if __name__ == '__main__':
     unittest.main()
