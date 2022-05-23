@@ -7,11 +7,6 @@ class Rectangle:
     number_of_instances = 0
     print_symbol = "#"
 
-    @classmethod
-    def square(cls, size=0):
-        """Function that returns a new Rectangle instance"""
-        return cls(size, size)
-
     def __init__(self, width=0, height=0):
         """init a rectangle
 
@@ -19,8 +14,8 @@ class Rectangle:
             width (int): Defaults to 0.
             height (int): Defaults to 0.
         """
-        self.__height = height
-        self.__width = width
+        self.height = height
+        self.width = width
         Rectangle.number_of_instances += 1
 
     @property
@@ -70,6 +65,11 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
+
+    @classmethod
+    def square(cls, size=0):
+        """Function that returns a new Rectangle instance"""
+        return cls(size, size)
 
     def area(self):
         """Function that return the rectangle area
