@@ -9,15 +9,8 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """Function that returns a new Rectangle instance
-
-        Args:
-            size (int, optional): size of the rectangle. Defaults to 0.
-
-        Returns:
-            Rectangle:
-        """
-        return (cls(size, size))
+        """Function that returns a new Rectangle instance"""
+        return cls(size, size)
 
     def __init__(self, width=0, height=0):
         """init a rectangle
