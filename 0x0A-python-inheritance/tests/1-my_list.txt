@@ -1,6 +1,8 @@
 >>> MyList = __import__('1-my_list').MyList
 
 >>> list = MyList()
+>>> type(list)
+<class '1-my_list.MyList'>
 >>> print(list)
 []
 >>> list.print_sorted()
