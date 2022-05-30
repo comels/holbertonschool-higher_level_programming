@@ -4,8 +4,9 @@
 
 class BaseGeometry:
     """the BaseGeometry class"""
+
     def area(self):  # sourcery skip: raise-specific-error
-        """function that raises an Exception"""
+        """function that raise an exception"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
