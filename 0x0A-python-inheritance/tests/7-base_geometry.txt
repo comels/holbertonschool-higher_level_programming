@@ -1,0 +1,41 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> base = BaseGeometry()
+
+>>> base.integer_validator("num", 17)
+
+>>> base.integer_validator("num", "Côme")
+Traceback (most recent call last):
+TypeError: num must be an integer
+
+>>> base.integer_validator("num", 0)
+Traceback (most recent call last):
+ValueError: num must be greater than 0
+
+>>> base.integer_validator("num", -4)
+Traceback (most recent call last):
+ValueError: num must be greater than 0
+
+>>> base.integer_validator("num", 7.8)
+Traceback (most recent call last):
+TypeError: num must be an integer
+
+>>> base.integer_validator("num")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> base.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> base.integer_validator("num", None)
+Traceback (most recent call last):
+TypeError: num must be an integer
+
+>>> base.integer_validator("num", [1])
+Traceback (most recent call last):
+TypeError: num must be an integer
+
+>>> base.integer_validator("num", {1, 2})
+Traceback (most recent call last):
+TypeError: num must be an integer

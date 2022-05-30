@@ -18,5 +18,5 @@ class Square(Rectangle):
         return self.__size ** 2
 
     def __str__(self):
-            """Function that define the __str__ method"""
-            return f"[Square] {self.__size}/{self.__size}"
+        """Function that define the __str__ method"""
+        return f"[Square] {self.__size}/{self.__size}"
