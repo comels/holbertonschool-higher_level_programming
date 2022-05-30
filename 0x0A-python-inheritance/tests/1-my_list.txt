@@ -54,3 +54,18 @@ NameError: name 'a' is not defined
 
 >>> list.print_sorted()
 [-1, 2, 3]
+
+>>> list = MyList([1, 2], [3, 4])
+Traceback (most recent call last):
+TypeError: list expected at most 1 argument, got 2
+
+>>> list = MyList()
+>>> list.append("holberton")
+>>> list.append("bonjour")
+>>> list.append("school")
+
+>>> print(list)
+['holberton', 'bonjour', 'school']
+
+>>> list.print_sorted()
+['bonjour', 'holberton', 'school']
