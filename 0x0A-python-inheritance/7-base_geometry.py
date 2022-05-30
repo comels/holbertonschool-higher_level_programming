@@ -2,7 +2,7 @@
 """the BaseGeometry class"""
 
 
-class BaseGeometry():
+class BaseGeometry:
     """the BaseGeometry class"""
     def area(self):  # sourcery skip: raise-specific-error
         """function that raises an Exception"""
