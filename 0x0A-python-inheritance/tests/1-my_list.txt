@@ -1,0 +1,56 @@
+>>> MyList = __import__('1-my_list').MyList
+
+>>> list = MyList()
+>>> print(list)
+[]
+>>> list.print_sorted()
+[]
+
+>>> list.append(1)
+>>> list.append(2)
+>>> list.append(3)
+>>> list.append(4)
+
+>>> print(list)
+[1, 2, 3, 4]
+
+>>> list.print_sorted()
+[1, 2, 3, 4]
+
+>>> list = MyList()
+>>> list.append(4)
+>>> list.append(3)
+>>> list.append(1)
+>>> list.append(2)
+
+>>> print(list)
+[4, 3, 1, 2]
+
+>>> list.print_sorted()
+[1, 2, 3, 4]
+
+>>> list = MyList()
+>>> list.append(-4)
+>>> list.append(3)
+>>> list.append(-1)
+>>> list.append(2)
+
+>>> print(list)
+[-4, 3, -1, 2]
+
+>>> list.print_sorted()
+[-4, -1, 2, 3]
+
+>>> list = MyList()
+>>> list.append(a)
+Traceback (most recent call last):
+NameError: name 'a' is not defined
+>>> list.append(3)
+>>> list.append(-1)
+>>> list.append(2)
+
+>>> print(list)
+[3, -1, 2]
+
+>>> list.print_sorted()
+[-1, 2, 3]
