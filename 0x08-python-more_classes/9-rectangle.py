@@ -14,11 +14,11 @@ class Rectangle:
             width (int): Defaults to 0.
             height (int): Defaults to 0.
         """
-        if isinstance(width, int) is False:
+        if not isinstance(width, int):
             raise TypeError('width must be an integer')
         elif width < 0:
             raise ValueError('width must be >= 0')
-        elif isinstance(height, int) is False:
+        elif not isinstance(height, int):
             raise TypeError('height must be an integer')
         elif height < 0:
             raise ValueError('height must be >= 0')
@@ -46,7 +46,7 @@ class Rectangle:
         """
         self.__width = value
 
-        if isinstance(value, int) is False:
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
@@ -70,7 +70,7 @@ class Rectangle:
         """
         self.__height = value
 
-        if isinstance(value, int) is False:
+        if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
@@ -106,22 +106,20 @@ class Rectangle:
             str: representation of the rectangle
         """
         string = ""
-        if self.__height == 0 or self.__width == 0:
-            return string
-        else:
+        if self.__height != 0 and self.__width != 0:
             for i in range(self.__height):
-                for j in range(self.__width):
+                for _ in range(self.__width):
                     string += str(self.print_symbol)
                 if i != self.__height - 1:
                     string += "\n"
-            return string
+        return string
 
     def __repr__(self):
         """
         special method used to represent a class's objects as a string
 
         """
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+        return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
         """
@@ -143,9 +141,9 @@ class Rectangle:
         Returns:
             Rectangle: the biggest Rectangle
         """
-        if isinstance(rect_1, Rectangle) is False:
+        if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
-        elif isinstance(rect_2, Rectangle) is False:
+        elif not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
         else:
             if rect_1.area() == rect_2.area():
