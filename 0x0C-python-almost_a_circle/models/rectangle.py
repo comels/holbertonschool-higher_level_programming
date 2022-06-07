@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """the Rectangle class"""
 from models.base import Base
 
