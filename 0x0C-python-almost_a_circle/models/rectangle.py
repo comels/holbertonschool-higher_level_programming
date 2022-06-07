@@ -109,10 +109,14 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def __str__(self):
+    def __str__(self):  # sourcery skip: avoid-builtin-shadow
         """Function that define the __str__ method"""
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
-            {self.__width}/{self.__height}"
+        id = self.id
+        x = self.__x
+        y = self.__y
+        w = self.__width
+        h = self.__height
+        return f"[Rectangle] ({id}) {x}/{y} - {w}/{h}"
 
     def update(self, *args, **kwargs):
         """function that assigns an argument to each attribute"""
