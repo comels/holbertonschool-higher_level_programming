@@ -10,7 +10,7 @@ from models.rectangle import Rectangle
 
 class TestBase_save_to_file(unittest.TestCase):
     """Unittests for testing save_to_file method of Base class."""
-    
+
     def test_save_to_file_one_rectangle(self):
         r = Rectangle(10, 7, 2, 8, 5)
         Rectangle.save_to_file([r])
