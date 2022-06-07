@@ -3,6 +3,8 @@
 Add unit test for the class Base
 """
 import unittest
+import os
+import pycodestyle
 from models.base import Base
 from models.square import Square
 from models.rectangle import Rectangle

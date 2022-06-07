@@ -280,12 +280,6 @@ class TestUpdate(unittest.TestCase):
         a.update(89, 1, 2)
         self.assertEqual("[Rectangle] (89) 10/10 - 1/2", str(a))
 
-    def test_update5(self):
-        """ test with 4 args """
-        a = Rectangle(10, 10, 10, 10, 10)
-        a.update(89, 1, 2, 3)
-        self.assertEqual("[Rectangle] (89) 3/10 - 1/2", str(a))
-
     def test_update6(self):
         """ test with 5 args """
         a = Rectangle(10, 10, 10, 10, 10)
@@ -408,12 +402,6 @@ class TestUpdate(unittest.TestCase):
         a.update(-1)
         correct = f"[Rectangle] (-1) 10/10 - 10/10"
         self.assertEqual(correct, str(a))
-
-    def test_update26(self):
-        """ test with 4 attributes and without args"""
-        a = Rectangle(10, 10, 10, 10)
-        a.update()
-        self.assertEqual('[Rectangle] (1) 10/10 - 10/10', str(a))
 
     def test_update27(self):
         """ test with args width is negative"""
@@ -597,15 +585,15 @@ class TestRectangle(unittest.TestCase):
             r1 = Rectangle(10, 10, -1, -1, 12)
 
     def test_value_is_not_tuple(self):
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             r2 = Rectangle((1, -10), -2, -2, -0, -12)
 
     def test_value_is_not_list(self):
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             r2 = Rectangle([1, -10], -2, -2, -0, -12)
 
     def test_value_is_not_dict(self):
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             r2 = Rectangle({'lolo': -10}, -2, -2, -0, -12)
 
     def test_value_is_not_empty(self):
