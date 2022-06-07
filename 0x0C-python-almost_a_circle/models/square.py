@@ -25,7 +25,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """function that assigns an argument to each attribute"""
-        if len(args) != 0:
+        if len(args) != 0 and args is not None:
             for i, arg in enumerate(args):
                 if i == 0:
                     self.id = arg
