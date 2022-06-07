@@ -366,7 +366,8 @@ class TestSquare(unittest.TestCase):
 
 class Test_str_square(unittest.TestCase):
     """tests for the str of square"""
-    Base._Base__nb_objects = 0
+    def setUp(self):
+        Base._Base__nb_objects = 0
 
     def test_str(self):
         """test normal use of str function"""
