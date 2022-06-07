@@ -7,7 +7,6 @@ class Square(Rectangle):
     """the Square class"""
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
-        self.__size = size
 
     def __str__(self):
         """Function that define the __str__ method"""
