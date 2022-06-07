@@ -42,9 +42,9 @@ class Square(Rectangle):
             if "size" in kwargs:
                 self.size = kwargs["size"]
             if "y" in kwargs:
-                self.y = kwargs["y"]
-            if "x" in kwargs:
                 self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.x = kwargs["y"]
 
     def to_dictionary(self):
         """that returns the dictionary representation of a Rectangle"""
