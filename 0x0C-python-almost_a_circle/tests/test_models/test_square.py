@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 Unit test for the Square class
 """
