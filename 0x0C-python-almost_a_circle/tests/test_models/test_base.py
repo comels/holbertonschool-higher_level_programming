@@ -14,6 +14,21 @@ from models.rectangle import Rectangle
 
 class TestBase_save_to_file(unittest.TestCase):
     """Unittests for testing save_to_file method of Base class."""
+    @classmethod
+    def tearDown(self):
+        """Delete any created files."""
+        try:
+            os.remove("Rectangle.json")
+        except IOError:
+            pass
+        try:
+            os.remove("Square.json")
+        except IOError:
+            pass
+        try:
+            os.remove("Base.json")
+        except IOError:
+            pass
 
     def test_save_one_rectangle(self):
         rect = Rectangle(10, 7, 2, 8, 5)
