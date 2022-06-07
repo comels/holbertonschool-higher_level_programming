@@ -2,6 +2,8 @@
 """
 Unit test for the Square class
 """
+
+
 import unittest
 from models.rectangle import Rectangle
 from models.square import Square
@@ -68,6 +70,7 @@ class TestSquareSize(unittest.TestCase):
         my_square = Square(2)
         with self.assertRaises(TypeError):
             my_square.size = {4}
+
 
 class TestSquareUpdate_args(unittest.TestCase):
     """Unittest for update(*args) method of Square instance"""
@@ -276,6 +279,7 @@ class TestSquareUpdate_kwargs(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             s.update(y=-3)
 
+
 class TestSquare(unittest.TestCase):
     """
         tests for square to dictionary
@@ -351,6 +355,7 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(TypeError):
             s18 = Square(2, 12, float('inf'))
             s18.to_dictionary()
+
 
 if __name__ == '__main__':
     unittest.main()

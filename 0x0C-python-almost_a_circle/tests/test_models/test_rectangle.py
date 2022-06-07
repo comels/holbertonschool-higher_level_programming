@@ -3,10 +3,12 @@
 Unit test for the Rectangle class
 """
 
+
 import unittest
 from models.rectangle import Rectangle
 from models.square import Square
 from models.base import Base
+
 
 class TestRectangle_setter_getter(unittest.TestCase):
     """test getter setter of the rectangle height and width"""
@@ -48,7 +50,7 @@ class TestRectangle_setter_getter(unittest.TestCase):
         rect = Rectangle(2, 3, 4, 5, 6)
         with self.assertRaises(TypeError):
             rect.height = {12}
-            
+
     def test_width_getter(self):
         rect = Rectangle(2, 3, 4, 5, 6)
         self.assertEqual(2, rect.width)
@@ -61,32 +63,33 @@ class TestRectangle_setter_getter(unittest.TestCase):
     def test_width_setter_negative(self):
         rect = Rectangle(2, 3, 4, 5, 6)
         with self.assertRaises(ValueError):
-                rect.width = -12
+            rect.width = -12
 
     def test_width_setter_float(self):
         rect = Rectangle(2, 3, 4, 5, 6)
         with self.assertRaises(TypeError):
-                rect.width = 1.2
+            rect.width = 1.2
 
     def test_width_setter_string(self):
         rect = Rectangle(2, 3, 4, 5, 6)
         with self.assertRaises(TypeError):
-                rect.width = "ok"
+            rect.width = "ok"
 
     def test_width_setter_list(self):
         rect = Rectangle(2, 3, 4, 5, 6)
         with self.assertRaises(TypeError):
-                rect.width = [12]
+            rect.width = [12]
 
     def test_width_setter_tuple(self):
         rect = Rectangle(2, 3, 4, 5, 6)
         with self.assertRaises(TypeError):
-                rect.width = (1, 2)
+            rect.width = (1, 2)
 
     def test_width_setter_dict(self):
         rect = Rectangle(2, 3, 4, 5, 6)
         with self.assertRaises(TypeError):
-                rect.width = {12}
+            rect.width = {12}
+
 
 class TestRectangle(unittest.TestCase):
     """class testing the to_dictionary method and __str__ of Rectangle"""
@@ -122,6 +125,7 @@ class TestRectangle(unittest.TestCase):
         self.assertRaises(TypeError, a.to_dictionary, 0)
         a = Rectangle(1, 2)
         self.assertRaises(TypeError, a.to_dictionary, None)
+
 
 class TestArea(unittest.TestCase):
     """ test area for class rectangle.py """
@@ -255,6 +259,7 @@ class TestArea(unittest.TestCase):
         with self.assertRaises(TypeError):
             a = Rectangle.area()
 
+
 class TestUpdate(unittest.TestCase):
     """ test update for class rectangle.py """
     def test_update1(self):
@@ -268,7 +273,7 @@ class TestUpdate(unittest.TestCase):
         a = Rectangle(10, 10, 10, 10, 10)
         a.update(89)
         self.assertEqual("[Rectangle] (89) 10/10 - 10/10", str(a))
-    
+
     def test_update3(self):
         """ test with 2 args """
         a = Rectangle(10, 10, 10, 10, 10)
@@ -440,6 +445,7 @@ class TestUpdate(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
             a.update(width=0, x=2, id=98)
 
+
 class TestRectangle(unittest.TestCase):
     """
         tests for Rectangle
@@ -488,7 +494,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(2, float('inf'))
         with self.assertRaises(TypeError):
-            Rectangle(10,"hello" ,2 , 0, 12)
+            Rectangle(10, "hello", 2, 0, 12)
         with self.assertRaises(TypeError):
             Rectangle(10, {1, 2}, 0, 0, 12)
 
@@ -514,7 +520,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(10, 2, "hello", 0, 12)
         with self.assertRaises(TypeError):
-            Rectangle(10, 2, {1 , 2}, 0, 12)
+            Rectangle(10, 2, {1, 2}, 0, 12)
 
     def test_y_is_integer(self):
         """
@@ -538,7 +544,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(10, 2, 0, "hello", 12)
         with self.assertRaises(TypeError):
-            Rectangle(10, 2, 0, {1 , 2}, 12)
+            Rectangle(10, 2, 0, {1, 2}, 12)
 
     def test_area(self):
         """
@@ -555,6 +561,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             r4 = Rectangle(-10, 3, 3, 2, 12)
             r4.area()
+
 
 class TestRectangle(unittest.TestCase):
     """
@@ -604,6 +611,7 @@ class TestRectangle(unittest.TestCase):
     def test_display_None(self):
         with self.assertRaises(TypeError):
             r1 = Rectangle(None, None, None, None)
+
 
 if __name__ == '__main__':
     unittest.main()

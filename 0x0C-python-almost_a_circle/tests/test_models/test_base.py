@@ -2,6 +2,8 @@
 """
 Add unit test for the class Base
 """
+
+
 import unittest
 import os
 import pycodestyle
@@ -66,6 +68,7 @@ class TestBase_save_to_file(unittest.TestCase):
         with self.assertRaises(TypeError):
             Square.save_to_file([], 1)
 
+
 class Test_Base_Create(unittest.TestCase):
     """class test of the create base function"""
 
@@ -86,6 +89,7 @@ class Test_Base_Create(unittest.TestCase):
         self.assertEqual(str(r1), str(r2))
         self.assertIsNot(r1, r2)
         self.assertNotEqual(r1, r2)
+
 
 class Test_Base_Init(unittest.TestCase):
     """class test of the init base function"""
@@ -132,6 +136,7 @@ class Test_Base_Init(unittest.TestCase):
             b = Base(1, 2)
         with self.assertRaises(TypeError):
             b = Base(1, None)
+
 
 class TestSquareSize(unittest.TestCase):
     """ tests for load_from_file of base.py """
@@ -186,6 +191,7 @@ class TestSquareSize(unittest.TestCase):
         """Test calling the function with an additional argument"""
         with self.assertRaises(TypeError):
             Base.load_from_file("Hello")
+
 
 class TestToJsonString(unittest.TestCase):
     """Unittest for to_json_string"""
@@ -267,6 +273,7 @@ class TestToJsonString(unittest.TestCase):
         with self.assertRaises(TypeError):
             Base.to_json_string([], 3600)
 
+
 class TestBase(unittest.TestCase):
     """
         test for Base
@@ -300,6 +307,7 @@ class TestBase(unittest.TestCase):
     def test_from_json_string(self):
         json_string = Base.from_json_string(None)
         self.assertEqual(json_string, [])
+
 
 if __name__ == '__main__':
     unittest.main()
