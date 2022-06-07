@@ -21,6 +21,11 @@ class TestRectangle_setter_getter(unittest.TestCase):
         rect.height = 12
         self.assertEqual(12, rect.height)
 
+    def test_height_setter_0(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        with self.assertRaises(ValueError):
+            rect.height = 0
+
     def test_height_setter_negative(self):
         rect = Rectangle(2, 3, 4, 5, 6)
         with self.assertRaises(ValueError):
@@ -59,6 +64,11 @@ class TestRectangle_setter_getter(unittest.TestCase):
         rect = Rectangle(2, 3, 4, 5, 6)
         rect.width = 12
         self.assertEqual(12, rect.width)
+
+    def test_width_setter_0(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        with self.assertRaises(ValueError):
+            rect.width = 0
 
     def test_width_setter_negative(self):
         rect = Rectangle(2, 3, 4, 5, 6)
@@ -611,6 +621,97 @@ class TestRectangle(unittest.TestCase):
     def test_display_None(self):
         with self.assertRaises(TypeError):
             r1 = Rectangle(None, None, None, None)
+
+
+class TestRectangle_setter_getter_x_y(unittest.TestCase):
+    """test getter setter of the rectangle x and y"""
+    def test_x_getter(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        self.assertEqual(4, rect.x)
+
+    def test_x_setter(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        rect.x = 12
+        self.assertEqual(12, rect.x)
+
+    def test_x_setter_negative(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        with self.assertRaises(ValueError):
+            rect.x = -12
+
+    def test_x_setter_0(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        rect.x = 0
+        self.assertEqual(0, rect.x)
+
+    def test_x_setter_float(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        with self.assertRaises(TypeError):
+            rect.x = 1.2
+
+    def test_x_setter_string(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        with self.assertRaises(TypeError):
+            rect.x = "ok"
+
+    def test_x_setter_list(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        with self.assertRaises(TypeError):
+            rect.x = [12]
+
+    def test_x_setter_tuple(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        with self.assertRaises(TypeError):
+            rect.x = (1, 2)
+
+    def test_x_setter_dict(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        with self.assertRaises(TypeError):
+            rect.x = {12}
+
+    def test_y_getter(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        self.assertEqual(5, rect.y)
+
+    def test_y_setter(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        rect.y = 12
+        self.assertEqual(12, rect.y)
+
+    def test_y_setter_negative(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        with self.assertRaises(ValueError):
+            rect.y = -12
+
+    def test_y_setter_0(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        rect.y = 0
+        self.assertEqual(0, rect.y)
+
+    def test_y_setter_float(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        with self.assertRaises(TypeError):
+            rect.y = 1.2
+
+    def test_y_setter_string(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        with self.assertRaises(TypeError):
+            rect.y = "ok"
+
+    def test_y_setter_list(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        with self.assertRaises(TypeError):
+            rect.y = [12]
+
+    def test_y_setter_tuple(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        with self.assertRaises(TypeError):
+            rect.y = (1, 2)
+
+    def test_y_setter_dict(self):
+        rect = Rectangle(2, 3, 4, 5, 6)
+        with self.assertRaises(TypeError):
+            rect.y = {12}
 
 
 if __name__ == '__main__':
