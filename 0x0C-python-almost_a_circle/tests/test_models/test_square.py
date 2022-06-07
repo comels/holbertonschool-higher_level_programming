@@ -18,6 +18,11 @@ class TestSquareSize(unittest.TestCase):
         with self.assertRaises(TypeError):
             Square.size()
 
+    def test_square_0(self):
+        """ test without args """
+        with self.assertRaises(ValueError):
+            Square(0)
+
     def test_square_size2(self):
         """test getter"""
         my_square = Square(2)
