@@ -8,6 +8,8 @@ import unittest
 from models.rectangle import Rectangle
 from models.square import Square
 from models.base import Base
+from unittest.mock import patch
+import io
 
 
 class TestRectangle_setter_getter(unittest.TestCase):
