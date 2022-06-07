@@ -284,6 +284,9 @@ class TestSquare(unittest.TestCase):
     """
         tests for square to dictionary
     """
+    def setUp(self):
+        Base._Base__nb_objects = 0
+
     def test_to_dict_square_ok(self):
         """
             tests for dictionary for a normal square
