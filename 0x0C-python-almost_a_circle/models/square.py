@@ -39,11 +39,11 @@ class Square(Rectangle):
         else:
             if "id" in kwargs:
                 self.id = kwargs["id"]
-            if "size" in kwargs:
+            elif "size" in kwargs:
                 self.width = kwargs["size"]
-            if "x" in kwargs:
+            elif "x" in kwargs:
                 self.x = kwargs["x"]
-            if "y" in kwargs:
+            elif "y" in kwargs:
                 self.x = kwargs["y"]
 
     def to_dictionary(self):
