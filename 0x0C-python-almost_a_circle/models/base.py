@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """the Base class"""
 import json
 import os
