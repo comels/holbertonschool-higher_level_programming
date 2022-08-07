@@ -6,6 +6,7 @@ from model_state import Base, State
 
 Base = declarative_base()
 
+
 class City(Base):
     __tablename__ = 'cities'
     id = Column(Integer, nullable=False, primary_key=True, unique=True,
