@@ -11,5 +11,5 @@ if __name__ == "__main__":
     x = requests.get(argv[1])
     if x.status_code >= 400:
         print("Error code: {}".format(x.status_code))
-    else
+    else:
         print(x.text)
