@@ -9,4 +9,4 @@ if __name__ == "__main__":
     from sys import argv
 
     with urlopen(argv[1]) as response:
-        print(f"{response.getheader('X-Request-Id')}")
+        print(response.getheader('X-Request-Id'))
